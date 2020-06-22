@@ -1,0 +1,48 @@
+.container {
+	display: flex;
+	flex: 1;
+}
+
+.table {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.emptyTd {
+	flex: 1;
+}
+
+.tableColContainer {
+	display: flex;
+	flex-direction: row;
+}
+
+.tableHeaderCols {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	justify-content: center;
+}
+
+.tableRow {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+
+.tableHeaderRows {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	justify-content: center;
+}
+
+/* this breaks table layout making visual sense */
+.tableCell {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	justify-content: center;
+	border: 1px black solid;
+}
