@@ -9,6 +9,29 @@
 	flex: 1;
 }
 
+.attackHeader {
+	display: flex;
+	justify-content: center;
+}
+
+.defendHeader {
+	display: flex;
+	align-self: center;
+	transform: rotate(180deg);
+	writing-mode: vertical-lr;
+}
+
+.leftGroup {
+	display: flex;
+	flex-direction: row;
+}
+
+.x {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+}
+
 .emptyTd {
 	flex: 1;
 }

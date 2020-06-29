@@ -5,12 +5,11 @@ const allTypes = Object.keys(typeMatchups);
 
 export const moveTo = (newrow: number, newcol: number) => {
 	if (
-		newrow >= 0 &&
-		newcol >= 0 &&
+		newrow >= 1 &&
+		newcol >= 1 &&
 		newrow <= allTypes.length &&
-		newcol <= allTypes.length - 1
+		newcol <= allTypes.length
 	) {
-		console.log(newrow, newcol);
 		RefManager[`row${newrow}col${newcol}`].current?.focus();
 	}
 };
