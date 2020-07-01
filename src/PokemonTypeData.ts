@@ -8,7 +8,6 @@ export const typeMatchups: TypeMatchup = {
 			"1x": [],
 			"2x": [],
 		},
-		defending: { "0x": ["Ghost"], "1/2x": [], "1x": [], "2x": ["Fighting"] },
 	},
 	Fighting: {
 		attacking: {
@@ -16,12 +15,6 @@ export const typeMatchups: TypeMatchup = {
 			"1/2x": ["Flying", "Poison", "Bug", "Psychic"],
 			"1x": [],
 			"2x": ["Normal", "Rock", "Steel", "Ice", "Dark"],
-		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
 		},
 	},
 	Flying: {
@@ -31,12 +24,6 @@ export const typeMatchups: TypeMatchup = {
 			"1x": [],
 			"2x": ["Fighting", "Bug", "Grass"],
 		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
-		},
 	},
 	Poison: {
 		attacking: {
@@ -44,12 +31,6 @@ export const typeMatchups: TypeMatchup = {
 			"1/2x": ["Poison", "Ground", "Steel", "Rock"],
 			"1x": [],
 			"2x": ["Grass", "Fairy"],
-		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
 		},
 	},
 	Ground: {
@@ -59,12 +40,6 @@ export const typeMatchups: TypeMatchup = {
 			"1x": [],
 			"2x": ["Poison", "Rock", "Steel", "Fire", "Electric"],
 		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
-		},
 	},
 	Rock: {
 		attacking: {
@@ -72,12 +47,6 @@ export const typeMatchups: TypeMatchup = {
 			"1/2x": ["Fighting", "Ground", "Steel"],
 			"1x": [],
 			"2x": ["Flying", "Bug", "Fire", "Ice"],
-		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
 		},
 	},
 	Bug: {
@@ -95,12 +64,6 @@ export const typeMatchups: TypeMatchup = {
 			"1x": [],
 			"2x": ["Grass", "Psychic", "Dark"],
 		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
-		},
 	},
 	Ghost: {
 		attacking: {
@@ -108,12 +71,6 @@ export const typeMatchups: TypeMatchup = {
 			"1/2x": ["Dark"],
 			"1x": [],
 			"2x": ["Ghost", "Psychic"],
-		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
 		},
 	},
 	Steel: {
@@ -123,12 +80,6 @@ export const typeMatchups: TypeMatchup = {
 			"1x": [],
 			"2x": ["Rock", "Ice", "Fairy"],
 		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
-		},
 	},
 	Fire: {
 		attacking: {
@@ -136,12 +87,6 @@ export const typeMatchups: TypeMatchup = {
 			"1/2x": ["Rock", "Fire", "Water", "Dragon"],
 			"1x": [],
 			"2x": ["Bug", "Steel", "Grass", "Ice"],
-		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
 		},
 	},
 	Water: {
@@ -151,12 +96,6 @@ export const typeMatchups: TypeMatchup = {
 			"1x": [],
 			"2x": ["Ground", "Rock", "Fire"],
 		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
-		},
 	},
 	Grass: {
 		attacking: {
@@ -164,12 +103,6 @@ export const typeMatchups: TypeMatchup = {
 			"1/2x": ["Fighting", "Flying", "Bug", "Steel", "Fire", "Grass", "Ice"],
 			"1x": [],
 			"2x": ["Ground", "Rock", "Water"],
-		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
 		},
 	},
 	Electric: {
@@ -179,12 +112,6 @@ export const typeMatchups: TypeMatchup = {
 			"1x": [],
 			"2x": ["Flying", "Water"],
 		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
-		},
 	},
 	Psychic: {
 		attacking: {
@@ -192,12 +119,6 @@ export const typeMatchups: TypeMatchup = {
 			"1/2x": ["Steel", "Psychic"],
 			"1x": [],
 			"2x": ["Fighting", "Poison"],
-		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
 		},
 	},
 	Ice: {
@@ -207,12 +128,6 @@ export const typeMatchups: TypeMatchup = {
 			"1x": [],
 			"2x": ["Flying", "Ground", "Grass", "Dragon"],
 		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
-		},
 	},
 	Dragon: {
 		attacking: {
@@ -220,12 +135,6 @@ export const typeMatchups: TypeMatchup = {
 			"1/2x": ["Steel"],
 			"1x": [],
 			"2x": ["Dragon"],
-		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
 		},
 	},
 	Dark: {
@@ -235,12 +144,6 @@ export const typeMatchups: TypeMatchup = {
 			"1x": [],
 			"2x": ["Ghost", "Psychic"],
 		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
-		},
 	},
 	Fairy: {
 		attacking: {
@@ -248,12 +151,6 @@ export const typeMatchups: TypeMatchup = {
 			"1/2x": ["Poison", "Steel", "Fire"],
 			"1x": [],
 			"2x": ["Fighting", "Dragon", "Dark"],
-		},
-		defending: {
-			"0x": [],
-			"1/2x": [],
-			"1x": [],
-			"2x": [],
 		},
 	},
 };

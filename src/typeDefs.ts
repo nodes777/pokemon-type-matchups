@@ -24,6 +24,5 @@ export type Effectiveness = { [dFactor in DamageFactor]: PokemonType[] };
 export type TypeMatchup = {
 	[pType in PokemonType]: {
 		attacking: Effectiveness;
-		defending: Effectiveness;
 	};
 };
