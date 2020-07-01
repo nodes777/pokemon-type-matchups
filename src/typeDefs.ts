@@ -19,7 +19,10 @@ export type PokemonType =
 	| "Fairy";
 
 export type DamageFactor = "0x" | "1/2x" | "1x" | "2x";
-export type Effectiveness = { [dFactor in DamageFactor]: PokemonType[] };
+export type Effectiveness = {
+	// is there a better way to index the union type?
+	[dFactor in DamageFactor]: { [pType in PokemonType]?: string };
+};
 
 export type TypeMatchup = {
 	[pType in PokemonType]: {
