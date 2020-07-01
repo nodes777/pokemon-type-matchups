@@ -1,7 +1,6 @@
 import { RefManager } from "./RefManager";
-import { typeMatchups, PokemonType } from "./typeDefs";
-
-const allTypes = Object.keys(typeMatchups);
+import { PokemonType } from "./typeDefs";
+import { allTypes } from "./PokemonTypeData";
 
 export const moveTo = (newrow: number, newcol: number) => {
 	if (

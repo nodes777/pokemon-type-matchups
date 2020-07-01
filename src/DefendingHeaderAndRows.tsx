@@ -1,6 +1,7 @@
 import React from "react";
 import { RefManager } from "./RefManager";
-import { allTypes, PokemonType } from "./typeDefs";
+import { PokemonType } from "./typeDefs";
+import { allTypes } from "./PokemonTypeData";
 
 import styles from "./styles.module.css";
 import { MatchupCell } from "./MatchupCell";

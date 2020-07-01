@@ -1,6 +1,6 @@
 import React from "react";
 import { RefManager } from "./RefManager";
-import { allTypes } from "./typeDefs";
+import { allTypes } from "./PokemonTypeData";
 
 import styles from "./styles.module.css";
 

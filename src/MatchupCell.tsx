@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import { PokemonType } from "./typeDefs";
 import { handleKey } from "./keyboardEventHandlers";
 import { determineDamageFactor } from "./helpers";
+import { Mnemonic } from "./Mnemonic";
 
 interface MatchupCellProps {
 	reference: React.RefObject<HTMLDivElement>;
@@ -38,8 +39,7 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 			<div>
 				{expanded ? (
 					<div>
-						<div>We're big now</div>
-						<div>Yes we are</div>
+						<Mnemonic />
 					</div>
 				) : null}
 			</div>

@@ -1,4 +1,5 @@
-import { PokemonType, DamageFactor, typeMatchups } from "./typeDefs";
+import { PokemonType, DamageFactor } from "./typeDefs";
+import { typeMatchups } from "./PokemonTypeData";
 
 export function determineDamageFactor(
 	attackingType: PokemonType,
