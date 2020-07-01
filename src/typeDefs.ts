@@ -285,3 +285,5 @@ export const typeMatchups: TypeMatchup = {
 		},
 	},
 };
+
+export const allTypes = Object.keys(typeMatchups);
