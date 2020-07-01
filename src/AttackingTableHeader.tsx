@@ -1,6 +1,5 @@
 import React from "react";
 import { RefManager } from "./RefManager";
-import { handleKey } from "./keyboardEventHandlers";
 import { allTypes } from "./typeDefs";
 
 import styles from "./styles.module.css";
@@ -22,10 +21,6 @@ export const AttackingTableHeader: React.FC<AttackingTableHeaderProps> = ({}) =>
 							className={styles.tableHeaderCols}
 							key={`${pokeType}Col`}
 							ref={ref}
-							tabIndex={-1}
-							onKeyDown={(e: React.KeyboardEvent) => {
-								handleKey(e, 0, col);
-							}}
 						>
 							{pokeType}
 						</div>

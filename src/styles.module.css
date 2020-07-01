@@ -26,7 +26,7 @@
 	flex-direction: row;
 }
 
-.x {
+.defendingHeaderAndRows {
 	display: flex;
 	flex-grow: 1;
 	flex-direction: column;
@@ -61,11 +61,18 @@
 	justify-content: center;
 }
 
-/* this breaks table layout making visual sense */
 .tableCell {
 	display: flex;
 	flex-direction: row;
 	flex: 1;
+	justify-content: center;
+	border: 1px black solid;
+}
+
+.bigCell {
+	display: flex;
+	flex-direction: row;
+	flex: 100;
 	justify-content: center;
 	border: 1px black solid;
 }
