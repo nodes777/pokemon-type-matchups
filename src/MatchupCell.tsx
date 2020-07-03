@@ -46,7 +46,7 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 			ref={reference}
 			className={`${
 				expanded ? styles.bigCell : styles.tableCell
-			}${factorStyle}`}
+			} ${factorStyle}`}
 			tabIndex={-1}
 			onKeyDown={(e: React.KeyboardEvent) => {
 				const entered = handleKey(e, row, col, attackingType, defendingType);
