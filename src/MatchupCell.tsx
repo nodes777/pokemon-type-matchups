@@ -20,6 +20,12 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 	col,
 }) => {
 	const [expanded, setExpanded] = useState(false);
+	const info = determineDamageFactor(
+		attackingType,
+		defendingType as PokemonType
+	);
+	const damageFactor = info.factorToDisplay;
+	const mneumonic = info.mneumonic;
 	return (
 		<div
 			role="gridcell"
@@ -32,14 +38,15 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 					setExpanded(entered);
 				}
 			}}
+			onBlur={() => {
+				setExpanded(false);
+			}}
 		>
-			<div>
-				{determineDamageFactor(attackingType, defendingType as PokemonType)}
-			</div>
+			<div>{damageFactor}</div>
 			<div>
 				{expanded ? (
 					<div>
-						<Mnemonic />
+						<Mnemonic text={mneumonic} />
 					</div>
 				) : null}
 			</div>
