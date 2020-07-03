@@ -24,7 +24,9 @@ export const DefendingHeaderAndRows: React.FC<DefendingHeaderAndRowsProps> = ({}
 							{pokeType}
 						</div>
 
-						{createRow(pokeType as PokemonType, row + 1)}
+						<div className={styles.rowContainer}>
+							{createRow(pokeType as PokemonType, row + 1)}
+						</div>
 					</div>
 				);
 			})}

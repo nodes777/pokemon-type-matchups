@@ -54,6 +54,13 @@
 	flex: 1;
 }
 
+.rowContainer {
+	display: flex;
+	flex-direction: row;
+	/*19 because thats the number of types/cols*/
+	flex: 19;
+}
+
 .tableHeaderRows {
 	display: flex;
 	flex-direction: row;
@@ -67,12 +74,26 @@
 	flex: 1;
 	justify-content: center;
 	border: 1px black solid;
+	transition: all 0.2s;
 }
 
 .bigCell {
 	display: flex;
 	flex-direction: row;
-	flex: 100;
+	flex: 50;
 	justify-content: center;
 	border: 1px black solid;
+	transition: all 1s;
+}
+
+.twoX {
+	color: green;
+}
+
+.halfX {
+	color: red;
+}
+
+.zeroX {
+	color: gray;
 }

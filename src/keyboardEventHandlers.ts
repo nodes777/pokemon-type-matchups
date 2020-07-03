@@ -31,23 +31,18 @@ export const handleKey = (
 		case "ArrowRight":
 			moveTo(row, col + 1);
 			return false;
-			break;
 		case "ArrowLeft":
 			moveTo(row, col - 1);
 			return false;
-			break;
 		case "ArrowDown":
 			moveTo(row + 1, col);
 			return false;
-			break;
 		case "ArrowUp":
 			moveTo(row - 1, col);
 			return false;
-			break;
 		case "Enter":
 			// GrowAndShow(attackingType, defendingType);
 			return true;
-			break;
 	}
 	event.preventDefault();
 };

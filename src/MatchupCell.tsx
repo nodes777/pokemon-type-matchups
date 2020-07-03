@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
-import { PokemonType } from "./typeDefs";
+import { PokemonType, DamageFactor } from "./typeDefs";
 import { handleKey } from "./keyboardEventHandlers";
 import { determineDamageFactor } from "./helpers";
 import { Mnemonic } from "./Mnemonic";
@@ -26,11 +26,27 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 	);
 	const damageFactor = info.factorToDisplay;
 	const mneumonic = info.mneumonic;
+	const determineFactorStyle = (damageFactor: DamageFactor) => {
+		switch (damageFactor) {
+			case "2x":
+				return styles.twoX;
+			case "1/2x":
+				return styles.halfX;
+			case "0x":
+				return styles.zeroX;
+			default:
+				return "";
+		}
+	};
+	const factorStyle = determineFactorStyle(damageFactor as DamageFactor);
+
 	return (
 		<div
 			role="gridcell"
 			ref={reference}
-			className={expanded ? styles.bigCell : styles.tableCell}
+			className={`${
+				expanded ? styles.bigCell : styles.tableCell
+			}${factorStyle}`}
 			tabIndex={-1}
 			onKeyDown={(e: React.KeyboardEvent) => {
 				const entered = handleKey(e, row, col, attackingType, defendingType);
