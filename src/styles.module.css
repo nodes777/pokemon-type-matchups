@@ -87,13 +87,23 @@
 }
 
 .twoX {
-	color: green;
+	background-color: lightgreen;
 }
 
 .halfX {
-	color: red;
+	background-color: red;
 }
 
 .zeroX {
-	color: gray;
+	background-color: gray;
+}
+
+.visuallyHidden {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap; /* added line */
 }

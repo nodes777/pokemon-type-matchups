@@ -23,9 +23,7 @@ export const moveTo = (newrow: number, newcol: number) => {
 export const handleKey = (
 	event: React.KeyboardEvent,
 	row: number,
-	col: number,
-	attackingType: PokemonType,
-	defendingType: PokemonType
+	col: number
 ) => {
 	switch (event.key) {
 		case "ArrowRight":
@@ -41,7 +39,6 @@ export const handleKey = (
 			moveTo(row - 1, col);
 			return false;
 		case "Enter":
-			// GrowAndShow(attackingType, defendingType);
 			return true;
 	}
 	event.preventDefault();

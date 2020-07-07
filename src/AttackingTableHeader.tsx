@@ -23,6 +23,7 @@ export const AttackingTableHeader: React.FC<AttackingTableHeaderProps> = ({}) =>
 							ref={ref}
 						>
 							{pokeType}
+							<span className={styles.visuallyHidden}> Attacking </span>
 						</div>
 					);
 				})}

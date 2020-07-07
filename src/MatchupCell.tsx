@@ -49,17 +49,20 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 			} ${factorStyle}`}
 			tabIndex={-1}
 			onKeyDown={(e: React.KeyboardEvent) => {
-				const entered = handleKey(e, row, col, attackingType, defendingType);
-				if (entered !== undefined) {
-					setExpanded(entered);
+				const entered = handleKey(e, row, col);
+				if (entered === true) {
+					expanded ? setExpanded(false) : setExpanded(true);
 				}
 			}}
 			onBlur={() => {
 				setExpanded(false);
 			}}
+			onClick={() => {
+				expanded ? setExpanded(false) : setExpanded(true);
+			}}
 		>
 			<div>{damageFactor}</div>
-			<div>
+			<div aria-live="polite" aria-expanded={expanded}>
 				{expanded ? (
 					<div>
 						<Mnemonic text={mneumonic} />

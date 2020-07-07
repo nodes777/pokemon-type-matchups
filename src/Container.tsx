@@ -8,14 +8,20 @@ export const Container: React.FC<ContainerProps> = ({}) => {
 	return (
 		<div className={styles.container}>
 			<div role="grid" className={styles.table}>
-				<div role="columnheader" className={styles.attackHeader}>
-					Attacking
+				<div role="row">
+					<div
+						role="columnheader"
+						id="attackingHeader"
+						className={styles.attackHeader}
+					>
+						Attacking
+					</div>
 				</div>
 				<AttackingTableHeader />
 
 				<div role="rowgroup" className={styles.leftGroup}>
 					<div className={styles.defendHeader}>
-						<div role="columnheader">Defending</div>
+						<div role="rowheader">Defending</div>
 					</div>
 					<DefendingHeaderAndRows />
 				</div>

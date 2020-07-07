@@ -22,6 +22,7 @@ export const DefendingHeaderAndRows: React.FC<DefendingHeaderAndRowsProps> = ({}
 							ref={ref}
 						>
 							{pokeType}
+							<span className={styles.visuallyHidden}> Defending </span>
 						</div>
 
 						<div className={styles.rowContainer}>
