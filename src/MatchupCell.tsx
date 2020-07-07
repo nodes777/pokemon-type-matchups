@@ -43,7 +43,10 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 	return (
 		<div
 			role="gridcell"
+			aria-colindex={col}
+			aria-rowindex={row}
 			ref={reference}
+			aria-expanded={expanded}
 			className={`${
 				expanded ? styles.bigCell : styles.tableCell
 			} ${factorStyle}`}
@@ -61,13 +64,15 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 				expanded ? setExpanded(false) : setExpanded(true);
 			}}
 		>
-			<div>{damageFactor}</div>
-			<div aria-live="polite" aria-expanded={expanded}>
-				{expanded ? (
-					<div>
-						<Mnemonic text={mneumonic} />
-					</div>
-				) : null}
+			<div className={styles.dFactorMnemonicContainer}>
+				<div>{damageFactor}</div>
+				<div aria-live="polite">
+					{expanded ? (
+						<div>
+							<Mnemonic text={mneumonic} />
+						</div>
+					) : null}
+				</div>
 			</div>
 		</div>
 	);

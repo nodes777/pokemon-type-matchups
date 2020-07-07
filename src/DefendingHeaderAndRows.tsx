@@ -10,11 +10,18 @@ interface DefendingHeaderAndRowsProps {}
 
 export const DefendingHeaderAndRows: React.FC<DefendingHeaderAndRowsProps> = ({}) => {
 	return (
-		<div className={styles.defendingHeaderAndRows}>
-			{allTypes.map((pokeType, row) => {
-				const ref = (RefManager[`row${row}col${0}`] = React.createRef());
+		<div role="rowgroup" className={styles.defendingHeaderAndRows}>
+			{allTypes.map((pokeType, r) => {
+				// plus 1 so that col/row indexing makes sense
+				const row = r + 1;
+				const ref = (RefManager[`row${row}col${1}`] = React.createRef());
 				return (
-					<div role="row" className={styles.tableRow} key={`Row${row}`}>
+					<div
+						role="row"
+						className={styles.tableRow}
+						key={`Row${row}`}
+						// aria-rowindex={row}
+					>
 						<div
 							role="rowheader"
 							className={styles.tableHeaderRows}
@@ -26,7 +33,7 @@ export const DefendingHeaderAndRows: React.FC<DefendingHeaderAndRowsProps> = ({}
 						</div>
 
 						<div className={styles.rowContainer}>
-							{createRow(pokeType as PokemonType, row + 1)}
+							{createRow(pokeType as PokemonType, row)}
 						</div>
 					</div>
 				);

@@ -2,13 +2,20 @@ import React from "react";
 import styles from "./styles.module.css";
 import { AttackingTableHeader } from "./AttackingTableHeader";
 import { DefendingHeaderAndRows } from "./DefendingHeaderAndRows";
+import { allTypes } from "./PokemonTypeData";
 interface ContainerProps {}
 
 export const Container: React.FC<ContainerProps> = ({}) => {
+	const numOfPokeTypes = allTypes.length;
 	return (
 		<div className={styles.container}>
-			<div role="grid" className={styles.table}>
-				<div role="row">
+			<div
+				role="grid"
+				aria-colcount={numOfPokeTypes}
+				aria-rowcount={numOfPokeTypes}
+				className={styles.table}
+			>
+				<div>
 					<div
 						role="columnheader"
 						id="attackingHeader"
@@ -19,7 +26,7 @@ export const Container: React.FC<ContainerProps> = ({}) => {
 				</div>
 				<AttackingTableHeader />
 
-				<div role="rowgroup" className={styles.leftGroup}>
+				<div className={styles.leftGroup}>
 					<div className={styles.defendHeader}>
 						<div role="rowheader">Defending</div>
 					</div>
