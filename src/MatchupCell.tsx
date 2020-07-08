@@ -41,30 +41,34 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 	const factorStyle = determineFactorStyle(damageFactor as DamageFactor);
 
 	return (
-		<div
+		<td
 			role="gridcell"
 			aria-colindex={col}
 			aria-rowindex={row}
-			ref={reference}
-			aria-expanded={expanded}
 			className={`${
 				expanded ? styles.bigCell : styles.tableCell
 			} ${factorStyle}`}
-			tabIndex={-1}
-			onKeyDown={(e: React.KeyboardEvent) => {
-				const entered = handleKey(e, row, col);
-				if (entered === true) {
-					expanded ? setExpanded(false) : setExpanded(true);
-				}
-			}}
-			onBlur={() => {
-				setExpanded(false);
-			}}
-			onClick={() => {
-				expanded ? setExpanded(false) : setExpanded(true);
-			}}
 		>
-			<div className={styles.dFactorMnemonicContainer}>
+			<div
+				aria-expanded={expanded}
+				className={`${expanded ? styles.bigCell : styles.tableCell} ${
+					styles.dFactorMnemonicContainer
+				}`}
+				ref={reference}
+				tabIndex={-1}
+				onKeyDown={(e: React.KeyboardEvent) => {
+					const entered = handleKey(e, row, col);
+					if (entered === true) {
+						expanded ? setExpanded(false) : setExpanded(true);
+					}
+				}}
+				onBlur={() => {
+					setExpanded(false);
+				}}
+				onClick={() => {
+					expanded ? setExpanded(false) : setExpanded(true);
+				}}
+			>
 				<div>{damageFactor}</div>
 				<div aria-live="polite">
 					{expanded ? (
@@ -74,6 +78,6 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 					) : null}
 				</div>
 			</div>
-		</div>
+		</td>
 	);
 };

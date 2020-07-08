@@ -10,35 +10,45 @@ interface DefendingHeaderAndRowsProps {}
 
 export const DefendingHeaderAndRows: React.FC<DefendingHeaderAndRowsProps> = ({}) => {
 	return (
-		<div role="rowgroup" className={styles.defendingHeaderAndRows}>
+		<tbody className={styles.defendingHeaderAndRows}>
 			{allTypes.map((pokeType, r) => {
 				// plus 1 so that col/row indexing makes sense
 				const row = r + 1;
 				const ref = (RefManager[`row${row}col${1}`] = React.createRef());
 				return (
-					<div
+					<tr
 						role="row"
 						className={styles.tableRow}
 						key={`Row${row}`}
 						// aria-rowindex={row}
 					>
-						<div
+						{r === 0 ? (
+							<th
+								role="rowheader"
+								scope="row"
+								rowSpan={18}
+								className={styles.defendHeader}
+							>
+								<div>Defending</div>
+							</th>
+						) : null}
+
+						<th
 							role="rowheader"
 							className={styles.tableHeaderRows}
 							key={`${pokeType}Row`}
-							ref={ref}
 						>
-							{pokeType}
-							<span className={styles.visuallyHidden}> Defending </span>
-						</div>
+							<div ref={ref}>
+								{pokeType}
+								<span className={styles.visuallyHidden}> Defending </span>
+							</div>
+						</th>
 
-						<div className={styles.rowContainer}>
-							{createRow(pokeType as PokemonType, row)}
-						</div>
-					</div>
+						{createRow(pokeType as PokemonType, row)}
+					</tr>
 				);
 			})}
-		</div>
+		</tbody>
 	);
 };
 

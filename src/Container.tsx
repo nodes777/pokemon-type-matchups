@@ -9,30 +9,28 @@ export const Container: React.FC<ContainerProps> = ({}) => {
 	const numOfPokeTypes = allTypes.length;
 	return (
 		<div className={styles.container}>
-			<div
+			<table
 				role="grid"
-				aria-colcount={numOfPokeTypes}
-				aria-rowcount={numOfPokeTypes}
+				// aria-colcount={numOfPokeTypes}
+				// aria-rowcount={numOfPokeTypes}
 				className={styles.table}
 			>
-				<div>
-					<div
-						role="columnheader"
-						id="attackingHeader"
-						className={styles.attackHeader}
-					>
-						Attacking
-					</div>
-				</div>
+				<thead className={styles.attackHeader}>
+					<tr>
+						<th
+							role="columnheader"
+							id="attackingHeader"
+							scope="col"
+							colSpan={numOfPokeTypes}
+						>
+							Attacking
+						</th>
+					</tr>
+				</thead>
 				<AttackingTableHeader />
 
-				<div className={styles.leftGroup}>
-					<div className={styles.defendHeader}>
-						<div role="rowheader">Defending</div>
-					</div>
-					<DefendingHeaderAndRows />
-				</div>
-			</div>
+				<DefendingHeaderAndRows />
+			</table>
 		</div>
 	);
 };
