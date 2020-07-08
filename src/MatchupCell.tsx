@@ -53,7 +53,7 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 			tabIndex={-1}
 			onKeyDown={(e: React.KeyboardEvent) => {
 				const entered = handleKey(e, row, col);
-				if (entered === true) {
+				if (entered) {
 					expanded ? setExpanded(false) : setExpanded(true);
 				}
 			}}

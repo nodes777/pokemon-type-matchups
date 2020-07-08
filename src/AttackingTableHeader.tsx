@@ -10,8 +10,8 @@ export const AttackingTableHeader: React.FC<AttackingTableHeaderProps> = ({}) =>
 	return (
 		<div role="rowgroup">
 			<div role="row" className={styles.tableColContainer}>
-				{/* This causes col headers index to be off by one (Normal is col 2 of 18), but without it, visually the cols look off*/}
-				<div className={styles.emptyTd} role="presentation" />
+				{/* Spacer empty gridcell*/}
+				<div className={styles.emptyTd} role="gridcell" />
 
 				{allTypes.map((pokeType, c) => {
 					const col = c + 1;

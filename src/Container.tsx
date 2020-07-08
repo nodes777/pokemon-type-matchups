@@ -8,31 +8,34 @@ interface ContainerProps {}
 export const Container: React.FC<ContainerProps> = ({}) => {
 	const numOfPokeTypes = allTypes.length;
 	return (
-		<div className={styles.container}>
-			<div
-				role="grid"
-				aria-colcount={numOfPokeTypes}
-				aria-rowcount={numOfPokeTypes}
-				className={styles.table}
-			>
-				<div>
-					<div
-						role="columnheader"
-						id="attackingHeader"
-						className={styles.attackHeader}
-					>
-						Attacking
+		<>
+			<h1 className={styles.heading}>Pokemon Type Match Ups</h1>
+			<div className={styles.container}>
+				<div
+					role="grid"
+					aria-colcount={numOfPokeTypes}
+					aria-rowcount={numOfPokeTypes}
+					className={styles.table}
+				>
+					<div role="row">
+						<div
+							role="columnheader"
+							id="attackingHeader"
+							className={styles.attackHeader}
+						>
+							Attacking
+						</div>
 					</div>
-				</div>
-				<AttackingTableHeader />
+					<AttackingTableHeader />
 
-				<div className={styles.leftGroup}>
-					<div className={styles.defendHeader}>
-						<div role="rowheader">Defending</div>
+					<div className={styles.leftGroup}>
+						<div className={styles.defendHeader}>
+							<div role="rowheader">Defending</div>
+						</div>
+						<DefendingHeaderAndRows />
 					</div>
-					<DefendingHeaderAndRows />
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
