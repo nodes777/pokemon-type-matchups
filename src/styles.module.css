@@ -19,6 +19,17 @@
 	justify-content: center;
 }
 
+.tableRowContainer {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+.tableRow {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+
 .defendHeader {
 	display: flex;
 	align-self: center;
@@ -55,12 +66,6 @@
 	flex-direction: row;
 	flex: 1;
 	justify-content: center;
-}
-
-.tableRow {
-	display: flex;
-	flex-direction: row;
-	flex: 1;
 }
 
 .rowContainer {

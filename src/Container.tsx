@@ -15,6 +15,12 @@ export const Container: React.FC<ContainerProps> = ({}) => {
 				// aria-rowcount={numOfPokeTypes}
 				className={styles.table}
 			>
+				<caption>Pokemon Type Matchups</caption>
+				{/* <colgroup>
+					<col />
+					<col span={2} className="batman" />
+					<col span={2} className="flash" />
+				</colgroup> */}
 				<tbody>
 					<tr role="row" className={styles.attackHeaderRow}>
 						<td className={styles.emptyTd}>&nbsp;</td>

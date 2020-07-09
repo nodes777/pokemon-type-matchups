@@ -18,7 +18,7 @@ export const DefendingHeaderAndRows: React.FC<DefendingHeaderAndRowsProps> = ({}
 				return (
 					<tr
 						role="row"
-						className={styles.tableRow}
+						className={styles.tableRowContainer}
 						key={`Row${row}`}
 						// aria-rowindex={row}
 					>
