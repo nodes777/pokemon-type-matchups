@@ -15,21 +15,23 @@ export const Container: React.FC<ContainerProps> = ({}) => {
 				// aria-rowcount={numOfPokeTypes}
 				className={styles.table}
 			>
-				<thead className={styles.attackHeader}>
-					<tr>
+				<tbody>
+					<tr role="row" className={styles.attackHeaderRow}>
+						<td className={styles.emptyTd}>&nbsp;</td>
+						<td className={styles.emptyTd}>&nbsp;</td>
 						<th
 							role="columnheader"
-							id="attackingHeader"
-							scope="col"
+							scope="colgroup"
 							colSpan={numOfPokeTypes}
+							className={styles.attackingHeader}
 						>
 							Attacking
 						</th>
 					</tr>
-				</thead>
-				<AttackingTableHeader />
+					<AttackingTableHeader />
 
-				<DefendingHeaderAndRows />
+					<DefendingHeaderAndRows />
+				</tbody>
 			</table>
 		</div>
 	);

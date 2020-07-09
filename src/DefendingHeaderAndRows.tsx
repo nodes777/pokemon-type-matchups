@@ -10,7 +10,7 @@ interface DefendingHeaderAndRowsProps {}
 
 export const DefendingHeaderAndRows: React.FC<DefendingHeaderAndRowsProps> = ({}) => {
 	return (
-		<tbody className={styles.defendingHeaderAndRows}>
+		<>
 			{allTypes.map((pokeType, r) => {
 				// plus 1 so that col/row indexing makes sense
 				const row = r + 1;
@@ -25,7 +25,7 @@ export const DefendingHeaderAndRows: React.FC<DefendingHeaderAndRowsProps> = ({}
 						{r === 0 ? (
 							<th
 								role="rowheader"
-								scope="row"
+								scope="rowgroup"
 								rowSpan={18}
 								className={styles.defendHeader}
 							>
@@ -35,20 +35,18 @@ export const DefendingHeaderAndRows: React.FC<DefendingHeaderAndRowsProps> = ({}
 
 						<th
 							role="rowheader"
+							scope="row"
 							className={styles.tableHeaderRows}
 							key={`${pokeType}Row`}
 						>
-							<div ref={ref}>
-								{pokeType}
-								<span className={styles.visuallyHidden}> Defending </span>
-							</div>
+							<div ref={ref}>{pokeType}</div>
 						</th>
 
 						{createRow(pokeType as PokemonType, row)}
 					</tr>
 				);
 			})}
-		</tbody>
+		</>
 	);
 };
 

@@ -9,7 +9,12 @@
 	flex: 1;
 }
 
-.attackHeader {
+.attackHeaderContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.attackHeaderRow {
 	display: flex;
 	justify-content: center;
 }
@@ -21,10 +26,10 @@
 	writing-mode: vertical-lr;
 }
 
-.leftGroup {
+/* .leftGroup {
 	display: flex;
 	flex-direction: row;
-}
+} */
 
 .defendingHeaderAndRows {
 	display: flex;
@@ -34,6 +39,10 @@
 
 .emptyTd {
 	flex: 1;
+}
+
+.attackingHeader {
+	flex: 18;
 }
 
 .tableColContainer {
