@@ -9,19 +9,10 @@ export const Container: React.FC<ContainerProps> = ({}) => {
 	const numOfPokeTypes = allTypes.length;
 	return (
 		<div className={styles.container}>
-			<table
-				role="grid"
-				// aria-colcount={numOfPokeTypes}
-				// aria-rowcount={numOfPokeTypes}
-				className={styles.table}
-			>
+			<table role="grid" className={styles.table}>
 				<caption>Pokemon Type Matchups</caption>
-				{/* <colgroup>
-					<col />
-					<col span={2} className="batman" />
-					<col span={2} className="flash" />
-				</colgroup> */}
-				<tbody>
+
+				<thead>
 					<tr role="row" className={styles.attackHeaderRow}>
 						<td className={styles.emptyTd}>&nbsp;</td>
 						<td className={styles.emptyTd}>&nbsp;</td>
@@ -35,7 +26,16 @@ export const Container: React.FC<ContainerProps> = ({}) => {
 						</th>
 					</tr>
 					<AttackingTableHeader />
-
+				</thead>
+				<tbody>
+					<th
+						role="rowheader"
+						scope="rowgroup"
+						rowSpan={18}
+						className={styles.defendHeader}
+					>
+						<div>Defending</div>
+					</th>
 					<DefendingHeaderAndRows />
 				</tbody>
 			</table>
