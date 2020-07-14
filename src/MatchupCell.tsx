@@ -53,7 +53,9 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 		>
 			<div
 				aria-expanded={expanded}
-				className={`${expanded ? null : null} ${styles.insideCell}`}
+				className={`${expanded ? styles.bigCell : styles.tableCell} ${
+					styles.dFactorMnemonicContainer
+				}`}
 				ref={reference}
 				tabIndex={-1}
 				onKeyDown={handleExpansionOnKeys}
