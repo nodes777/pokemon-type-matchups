@@ -30,6 +30,7 @@ tbody {
 	justify-content: center;
 	transform: rotate(180deg);
 	writing-mode: vertical-lr;
+	font-weight: 900;
 }
 
 .tableRowContainer {
