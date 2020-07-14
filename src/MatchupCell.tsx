@@ -51,7 +51,7 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 		>
 			<div
 				aria-expanded={expanded}
-				className={`${expanded ? styles.bigCell : styles.tableCell} ${
+				className={`${expanded ? null : null} ${
 					styles.dFactorMnemonicContainer
 				}`}
 				ref={reference}

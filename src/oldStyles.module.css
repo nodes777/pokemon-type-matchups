@@ -1,4 +1,4 @@
-.container {
+/* .container {
 	display: flex;
 	flex: 1;
 }
@@ -7,9 +7,9 @@
 	display: flex;
 	flex-direction: column;
 	flex: 1;
-}
+} */
 
-.attackHeaderContainer {
+/* .attackHeaderContainer {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -23,8 +23,8 @@
 	display: flex;
 	flex-direction: row;
 	flex: 1;
-}
-.tableRow {
+} */
+/* .tableRow {
 	display: flex;
 	flex-direction: row;
 	flex: 1;
@@ -35,14 +35,14 @@
 	align-self: center;
 	transform: rotate(180deg);
 	writing-mode: vertical-lr;
-}
+} */
 
 /* .leftGroup {
 	display: flex;
 	flex-direction: row;
 } */
 
-.defendingHeaderAndRows {
+/* .defendingHeaderAndRows {
 	display: flex;
 	flex-grow: 1;
 	flex-direction: column;
@@ -50,9 +50,9 @@
 
 .emptyTd {
 	flex: 1;
-}
+} */
 
-.attackingHeader {
+/* .attackingHeader {
 	flex: 18;
 }
 
@@ -66,23 +66,23 @@
 	flex-direction: row;
 	flex: 1;
 	justify-content: center;
-}
+} */
 
-.rowContainer {
+/* /* .rowContainer {
 	display: flex;
 	flex-direction: row;
-	/*18 because thats the number of types/cols*/
+	/*18 because thats the number of types/cols*
 	flex: 18;
-}
+}  */
 
-.tableHeaderRows {
+/* .tableHeaderRows {
 	display: flex;
 	flex-direction: row;
 	flex: 1;
 	justify-content: center;
-}
+} */
 
-.tableCell {
+/* .tableCell {
 	display: flex;
 	flex-direction: row;
 	flex: 1;
@@ -98,9 +98,9 @@
 	justify-content: center;
 	border: 1px black solid;
 	transition: all 1s;
-}
+} */
 
-.twoX {
+/* .twoX {
 	background-color: lightgreen;
 }
 
@@ -118,10 +118,10 @@
 	width: 1px;
 	overflow: hidden;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
+	/* clip: rect(1px, 1px, 1px, 1px);
 	white-space: nowrap; /* added line */
-}
+} */
 
 .dFactorMnemonicContainer {
 	text-align: center;
-}
+} */

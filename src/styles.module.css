@@ -33,18 +33,45 @@ tbody {
 }
 
 .tableRowContainer {
-	color: black;
 	grid-column: 2/20;
-	display: grid;
+	display: flex;
 	grid-template-columns: repeat(19, 1fr);
 }
 
+.tableHeaderRows {
+	display: flex;
+	min-width: 64px;
+	flex: 1;
+	justify-content: center;
+}
+
 .tableCell {
+	display: flex;
+	flex: 1;
 	justify-content: center;
 	border: 1px black solid;
 	transition: all 0.2s;
 }
 
-.tableCell:focus {
-	color: red;
+.bigCell {
+	display: flex;
+	flex: 10;
+	justify-content: center;
+	border: 1px black solid;
+	transition: all 1s;
+}
+
+.twoX {
+	background-color: lightgreen;
+}
+
+.halfX {
+	background-color: red;
+}
+
+.zeroX {
+	background-color: gray;
+}
+.dFactorMnemonicContainer {
+	text-align: center;
 }
