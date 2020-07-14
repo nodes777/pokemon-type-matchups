@@ -32,17 +32,58 @@ tbody {
 	writing-mode: vertical-lr;
 }
 
-.tableRowContainer {
-	color: black;
+.tableRowContainerStandard {
 	grid-column: 2/20;
 	display: grid;
 	grid-template-columns: repeat(19, 1fr);
+	transition: all 1s;
+}
+
+.tableRowContainer1 {
+	grid-template-columns: 1fr 10fr repeat(18, 1fr);
+	transition: all 1s;
+}
+.tableRowContainer2 {
+	grid-template-columns: repeat(2, 1fr) 10fr repeat(17, 1fr);
+	transition: all 1s;
+}
+.tableRowContainer3 {
+	grid-template-columns: 1fr 10fr repeat(18, 1fr);
+}
+.tableRowContainer4 {
+	grid-template-columns: 1fr 10fr repeat(18, 1fr);
 }
 
 .tableCell {
+	display: flex;
+	flex: 1;
 	justify-content: center;
 	border: 1px black solid;
 	transition: all 0.2s;
+}
+
+.bigCell {
+	display: flex;
+	justify-content: center;
+	flex: 50;
+	transition: all 1s;
+}
+
+.insideCell {
+	display: flex;
+	justify-content: center;
+}
+
+.twoX {
+	background-color: lightgreen;
+}
+
+.halfX {
+	background-color: red;
+}
+
+.zeroX {
+	background-color: gray;
 }
 
 .tableCell:focus {

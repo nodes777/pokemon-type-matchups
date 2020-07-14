@@ -16,7 +16,11 @@ export const DefendingHeaderAndRows: React.FC<DefendingHeaderAndRowsProps> = ({}
 				const row = r + 1;
 				const ref = (RefManager[`row${row}col${1}`] = React.createRef());
 				return (
-					<tr role="row" className={styles.tableRowContainer} key={`Row${row}`}>
+					<tr
+						role="row"
+						className={styles.tableRowContainerStandard}
+						key={`Row${row}`}
+					>
 						<th
 							role="rowheader"
 							scope="row"
