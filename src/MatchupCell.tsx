@@ -11,6 +11,7 @@ interface MatchupCellProps {
 	defendingType: PokemonType;
 	row: number;
 	col: number;
+	handleExpansionOnKeys: (e: React.KeyboardEvent) => void;
 }
 export const MatchupCell: React.FC<MatchupCellProps> = ({
 	reference,
@@ -18,6 +19,7 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 	attackingType,
 	row,
 	col,
+	handleExpansionOnKeys,
 }) => {
 	const [expanded, setExpanded] = useState(false);
 	const info = determineDamageFactor(
@@ -54,12 +56,7 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 				className={`${expanded ? null : null} ${styles.insideCell}`}
 				ref={reference}
 				tabIndex={-1}
-				onKeyDown={(e: React.KeyboardEvent) => {
-					const entered = handleKey(e, row, col);
-					if (entered === true) {
-						expanded ? setExpanded(false) : setExpanded(true);
-					}
-				}}
+				onKeyDown={handleExpansionOnKeys}
 				onBlur={() => {
 					setExpanded(false);
 				}}

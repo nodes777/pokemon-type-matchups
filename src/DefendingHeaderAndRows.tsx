@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { RefManager } from "./RefManager";
 import { PokemonType } from "./typeDefs";
 import { allTypes } from "./PokemonTypeData";
 
 import styles from "./styles.module.css";
 import { MatchupCell } from "./MatchupCell";
+import { handleKey } from "./keyboardEventHandlers";
 
 interface DefendingHeaderAndRowsProps {}
 
@@ -39,6 +40,7 @@ export const DefendingHeaderAndRows: React.FC<DefendingHeaderAndRowsProps> = ({}
 };
 
 function createRow(attackingType: PokemonType, row: number) {
+	const [expanded, setExpanded] = useState(false);
 	return allTypes.map((defendingType, c) => {
 		// plus 1 b/c of row header
 		const col = c + 1;
@@ -53,6 +55,12 @@ function createRow(attackingType: PokemonType, row: number) {
 				attackingType={attackingType}
 				row={row}
 				col={col}
+				handleExpansionOnKeys={(e: React.KeyboardEvent) => {
+					const entered = handleKey(e, row, col);
+					if (entered === true) {
+						expanded ? setExpanded(false) : setExpanded(true);
+					}
+				}}
 			/>
 		);
 	});
