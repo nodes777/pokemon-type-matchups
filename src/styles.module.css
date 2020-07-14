@@ -1,127 +1,50 @@
-.container {
-	display: flex;
-	flex: 1;
-}
-
 .table {
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-}
-
-.attackHeaderContainer {
-	display: flex;
-	flex-direction: column;
+	/* border: 1px solid black; */
+	display: grid;
+	grid-template-rows: auto;
 	justify-content: center;
 }
+
+thead {
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+}
+
 .attackHeaderRow {
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 19fr;
+}
+.tableColContainer {
+	display: grid;
+	grid-template-columns: repeat(20, 1fr);
 }
 
-.tableRowContainer {
-	display: flex;
-	flex-direction: row;
-	flex: 1;
-}
-.tableRow {
-	display: flex;
-	flex-direction: row;
-	flex: 1;
+tbody {
+	display: grid;
+	grid-template-columns: 1fr 18fr;
 }
 
 .defendHeader {
-	display: flex;
-	align-self: center;
+	grid-row: 1 / span 18;
+	display: grid;
+	justify-content: center;
 	transform: rotate(180deg);
 	writing-mode: vertical-lr;
 }
 
-/* .leftGroup {
-	display: flex;
-	flex-direction: row;
-} */
-
-.defendingHeaderAndRows {
-	display: flex;
-	flex-grow: 1;
-	flex-direction: column;
-}
-
-.emptyTd {
-	flex: 1;
-}
-
-.attackingHeader {
-	flex: 18;
-}
-
-.tableColContainer {
-	display: flex;
-	flex-direction: row;
-}
-
-.tableHeaderCols {
-	display: flex;
-	flex-direction: row;
-	flex: 1;
-	justify-content: center;
-}
-
-.rowContainer {
-	display: flex;
-	flex-direction: row;
-	/*18 because thats the number of types/cols*/
-	flex: 18;
-}
-
-.tableHeaderRows {
-	display: flex;
-	flex-direction: row;
-	flex: 1;
-	justify-content: center;
+.tableRowContainer {
+	color: black;
+	grid-column: 2/20;
+	display: grid;
+	grid-template-columns: repeat(19, 1fr);
 }
 
 .tableCell {
-	display: flex;
-	flex-direction: row;
-	flex: 1;
 	justify-content: center;
 	border: 1px black solid;
 	transition: all 0.2s;
 }
 
-.bigCell {
-	display: flex;
-	flex-direction: row;
-	flex: 50;
-	justify-content: center;
-	border: 1px black solid;
-	transition: all 1s;
-}
-
-.twoX {
-	background-color: lightgreen;
-}
-
-.halfX {
-	background-color: red;
-}
-
-.zeroX {
-	background-color: gray;
-}
-
-.visuallyHidden {
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	white-space: nowrap; /* added line */
-}
-
-.dFactorMnemonicContainer {
-	text-align: center;
+.tableCell:focus {
+	color: red;
 }

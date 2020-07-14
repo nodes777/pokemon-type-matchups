@@ -1,0 +1,127 @@
+.container {
+	display: flex;
+	flex: 1;
+}
+
+.table {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.attackHeaderContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.attackHeaderRow {
+	display: flex;
+	justify-content: center;
+}
+
+.tableRowContainer {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+.tableRow {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+
+.defendHeader {
+	display: flex;
+	align-self: center;
+	transform: rotate(180deg);
+	writing-mode: vertical-lr;
+}
+
+/* .leftGroup {
+	display: flex;
+	flex-direction: row;
+} */
+
+.defendingHeaderAndRows {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+}
+
+.emptyTd {
+	flex: 1;
+}
+
+.attackingHeader {
+	flex: 18;
+}
+
+.tableColContainer {
+	display: flex;
+	flex-direction: row;
+}
+
+.tableHeaderCols {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	justify-content: center;
+}
+
+.rowContainer {
+	display: flex;
+	flex-direction: row;
+	/*18 because thats the number of types/cols*/
+	flex: 18;
+}
+
+.tableHeaderRows {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	justify-content: center;
+}
+
+.tableCell {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	justify-content: center;
+	border: 1px black solid;
+	transition: all 0.2s;
+}
+
+.bigCell {
+	display: flex;
+	flex-direction: row;
+	flex: 50;
+	justify-content: center;
+	border: 1px black solid;
+	transition: all 1s;
+}
+
+.twoX {
+	background-color: lightgreen;
+}
+
+.halfX {
+	background-color: red;
+}
+
+.zeroX {
+	background-color: gray;
+}
+
+.visuallyHidden {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap; /* added line */
+}
+
+.dFactorMnemonicContainer {
+	text-align: center;
+}

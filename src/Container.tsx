@@ -7,11 +7,11 @@ interface ContainerProps {}
 
 export const Container: React.FC<ContainerProps> = ({}) => {
 	const numOfPokeTypes = allTypes.length;
+	const numOfCells = numOfPokeTypes + 1;
 	return (
 		<div className={styles.container}>
 			<table role="grid" className={styles.table}>
 				<caption>Pokemon Type Matchups</caption>
-
 				<thead>
 					<tr role="row" className={styles.attackHeaderRow}>
 						<td className={styles.emptyTd}>&nbsp;</td>
@@ -19,7 +19,7 @@ export const Container: React.FC<ContainerProps> = ({}) => {
 						<th
 							role="columnheader"
 							scope="colgroup"
-							colSpan={numOfPokeTypes}
+							colSpan={numOfCells}
 							className={styles.attackingHeader}
 						>
 							Attacking
@@ -28,14 +28,14 @@ export const Container: React.FC<ContainerProps> = ({}) => {
 					<AttackingTableHeader />
 				</thead>
 				<tbody>
-					<th
+					<td
 						role="rowheader"
 						scope="rowgroup"
-						rowSpan={18}
+						rowSpan={numOfCells}
 						className={styles.defendHeader}
 					>
 						<div>Defending</div>
-					</th>
+					</td>
 					<DefendingHeaderAndRows />
 				</tbody>
 			</table>
