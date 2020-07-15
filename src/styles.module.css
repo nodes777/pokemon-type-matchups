@@ -1,44 +1,75 @@
 .table {
 	display: grid;
-	grid-template-rows: auto;
+	grid-template-rows: 1fr repeat(19, 19fr);
+	grid-template-columns: repeat(20, 1fr);
 }
+
+caption {
+	grid-column-start: 1;
+	grid-column-end: 20;
+	grid-row-start: 1;
+	grid-row-end: 1;
+	justify-self: center;
+	justify-content: center;
+}
+
 tbody {
+	grid-column-start: 1;
+	grid-column-end: 20;
+
 	display: grid;
 	grid-template-rows: auto;
+	grid-template-columns: repeat(20, 1fr);
 	justify-content: center;
 }
 
 .attackingHeaderRow {
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 20;
 	display: grid;
 	grid-template-columns: 1fr 1fr 19fr;
 	justify-content: center;
 }
 
-.tableColContainer {
+.attackingTypesHeaderRow {
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 20;
 	display: grid;
 	grid-template-columns: repeat(20, 1fr);
 	justify-content: center;
 }
 
+/*trickery*/
 .firstRowContainer {
-	display: grid;
-	grid-template-columns: repeat(20, 1fr);
-}
-
-.tableRowContainer {
+	grid-column-start: 2;
+	grid-column-end: 20;
+	grid-row-start: 3;
 	display: flex;
-	grid-template-columns: repeat(20, 1fr);
 }
 
 .defendHeader {
-	grid-row: 1 / span 19;
-	display: grid;
+	position: absolute;
+	display: flex;
+	left: 20px;
+	top: 50%;
+
 	justify-content: center;
 	transform: rotate(180deg);
 	writing-mode: vertical-lr;
 	font-weight: 900;
 }
 
+.tableRowContainer {
+	grid-column-start: 2;
+	grid-column-end: 20;
+	display: flex;
+}
+
+/*rename*/
 .tableHeaderRows {
 	display: flex;
 	min-width: 64px;
@@ -52,4 +83,28 @@ tbody {
 	justify-content: center;
 	border: 1px black solid;
 	transition: all 0.2s;
+}
+
+.bigCell {
+	display: flex;
+	flex: 10;
+	justify-content: center;
+	border: 1px black solid;
+	transition: all 1s;
+}
+
+.twoX {
+	background-color: lightgreen;
+}
+
+.halfX {
+	background-color: red;
+}
+
+.zeroX {
+	background-color: gray;
+}
+.dFactorMnemonicContainer {
+	width: 100%;
+	text-align: center;
 }

@@ -8,7 +8,7 @@ interface AttackingTableHeaderProps {}
 
 export const AttackingTypeTableHeaders: React.FC<AttackingTableHeaderProps> = ({}) => {
 	return (
-		<tr className={styles.tableColContainer} role="row">
+		<tr className={styles.attackingTypesHeaderRow} role="row">
 			{/* Empty cells to make room for Defending and Defending Type headers */}
 			<td className={styles.emptyTd}>&nbsp;</td>
 			<td className={styles.emptyTd}>&nbsp;</td>
