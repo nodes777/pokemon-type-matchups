@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
-import { AttackingTableHeader } from "./AttackingTableHeader";
+import { AttackingTypeTableHeaders } from "./AttackingTypeTableHeaders";
 import { DefendingHeaderAndRows } from "./DefendingHeaderAndRows";
 import { allTypes } from "./PokemonTypeData";
 interface ContainerProps {}
@@ -12,30 +12,21 @@ export const Container: React.FC<ContainerProps> = ({}) => {
 		<div className={styles.container}>
 			<table role="grid" className={styles.table}>
 				<caption>Pokemon Type Matchups</caption>
-				<thead>
-					<tr role="row" className={styles.attackHeaderRow}>
+				<tbody>
+					<tr role="row" className={styles.attackingHeaderRow}>
 						<td className={styles.emptyTd}>&nbsp;</td>
 						<td className={styles.emptyTd}>&nbsp;</td>
 						<th
 							role="columnheader"
 							scope="colgroup"
-							colSpan={numOfCells}
+							colSpan={numOfPokeTypes}
 							className={styles.attackingHeader}
 						>
 							Attacking
 						</th>
 					</tr>
-					<AttackingTableHeader />
-				</thead>
-				<tbody>
-					<td
-						role="rowheader"
-						scope="rowgroup"
-						rowSpan={numOfCells}
-						className={styles.defendHeader}
-					>
-						<div>Defending</div>
-					</td>
+					<AttackingTypeTableHeaders />
+
 					<DefendingHeaderAndRows />
 				</tbody>
 			</table>

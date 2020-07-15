@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 
 interface AttackingTableHeaderProps {}
 
-export const AttackingTableHeader: React.FC<AttackingTableHeaderProps> = ({}) => {
+export const AttackingTypeTableHeaders: React.FC<AttackingTableHeaderProps> = ({}) => {
 	return (
 		<tr className={styles.tableColContainer} role="row">
 			{/* Empty cells to make room for Defending and Defending Type headers */}

@@ -12,11 +12,29 @@ export const DefendingHeaderAndRows: React.FC<DefendingHeaderAndRowsProps> = ({}
 	return (
 		<>
 			{allTypes.map((pokeType, r) => {
+				// to handle the Defending header
+				const isFirstRow = r === 0;
 				// plus 1 so that col/row indexing makes sense
 				const row = r + 1;
 				const ref = (RefManager[`row${row}col${1}`] = React.createRef());
 				return (
-					<tr role="row" className={styles.tableRowContainer} key={`Row${row}`}>
+					<tr
+						role="row"
+						className={`${
+							isFirstRow ? styles.firstRowContainer : styles.tableRowContainer
+						}`}
+						key={`Row${row}`}
+					>
+						{isFirstRow ? (
+							<th
+								role="rowheader"
+								scope="rowgroup"
+								rowSpan={18}
+								className={styles.defendHeader}
+							>
+								<div>Defending</div>
+							</th>
+						) : null}
 						<th
 							role="rowheader"
 							scope="row"

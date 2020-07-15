@@ -1,42 +1,42 @@
 .table {
-	/* border: 1px solid black; */
+	display: grid;
+	grid-template-rows: auto;
+}
+tbody {
 	display: grid;
 	grid-template-rows: auto;
 	justify-content: center;
 }
 
-thead {
-	display: grid;
-	grid-template-rows: repeat(2, 1fr);
-}
-
-.attackHeaderRow {
+.attackingHeaderRow {
 	display: grid;
 	grid-template-columns: 1fr 1fr 19fr;
+	justify-content: center;
 }
+
 .tableColContainer {
+	display: grid;
+	grid-template-columns: repeat(20, 1fr);
+	justify-content: center;
+}
+
+.firstRowContainer {
 	display: grid;
 	grid-template-columns: repeat(20, 1fr);
 }
 
-tbody {
-	display: grid;
-	grid-template-columns: 1fr 18fr;
+.tableRowContainer {
+	display: flex;
+	grid-template-columns: repeat(20, 1fr);
 }
 
 .defendHeader {
-	grid-row: 1 / span 18;
+	grid-row: 1 / span 19;
 	display: grid;
 	justify-content: center;
 	transform: rotate(180deg);
 	writing-mode: vertical-lr;
 	font-weight: 900;
-}
-
-.tableRowContainer {
-	grid-column: 2/20;
-	display: flex;
-	grid-template-columns: repeat(19, 1fr);
 }
 
 .tableHeaderRows {
@@ -52,27 +52,4 @@ tbody {
 	justify-content: center;
 	border: 1px black solid;
 	transition: all 0.2s;
-}
-
-.bigCell {
-	display: flex;
-	flex: 10;
-	justify-content: center;
-	border: 1px black solid;
-	transition: all 1s;
-}
-
-.twoX {
-	background-color: lightgreen;
-}
-
-.halfX {
-	background-color: red;
-}
-
-.zeroX {
-	background-color: gray;
-}
-.dFactorMnemonicContainer {
-	text-align: center;
 }

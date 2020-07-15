@@ -51,9 +51,7 @@ export const MatchupCell: React.FC<MatchupCellProps> = ({
 		>
 			<div
 				aria-expanded={expanded}
-				className={`${expanded ? null : null} ${
-					styles.dFactorMnemonicContainer
-				}`}
+				className={styles.dFactorMnemonicContainer}
 				ref={reference}
 				tabIndex={-1}
 				onKeyDown={(e: React.KeyboardEvent) => {
